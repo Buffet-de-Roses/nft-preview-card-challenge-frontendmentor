@@ -75,7 +75,7 @@
       text-decoration: none;
     }
 
-    a:hover{
+    a.nft-a:hover{
       color:hsl(178, 100%, 50%);
       text-decoration: none;
     }
@@ -111,6 +111,24 @@
     img.icon {
       margin-right: 4px;
     }
+
+    .overlay {
+      position: absolute;
+      background-color: hsla(178, 100%, 50%, 0.5);
+      top: 18.7%;
+      height: 300px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      opacity: 0;
+    }
+
+    .overlay:hover {
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -119,9 +137,11 @@
     <h1></h1>
     <div class="card">
       <img class="equilibrium" alt="image-equilibrium" src="./images/image-equilibrium.jpg">
+      <div class="overlay">
+        <img class="img-overlay" src="./images/icon-view.svg" alt="icon-view">
+      </div>
       <div class="informations">
-        <h2><a href="#">Equilibrium #3429</a></h2>
-
+        <h2><a class="nft-a" href="#">Equilibrium #3429</a></h2>
         <p>Our Equilibrium collection promotes balance and calm.</p>
         <div class="price">
           <span class="eth"><img class="icon" src="./images/icon-ethereum.svg">0.041 ETH</span>
@@ -130,7 +150,7 @@
         <hr>
         <div class="creator">
           <img class="avatar" src="./images/image-avatar.png" alt="image-avatar">
-          <p>Creation of <a href="#">Jules Wyvern</a></p>
+          <p>Creation of <a class="nft-a" href="#">Jules Wyvern</a></p>
         </div>
       </div>
     </div>
