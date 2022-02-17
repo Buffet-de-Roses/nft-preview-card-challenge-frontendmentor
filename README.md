@@ -50,24 +50,32 @@ Users should be able to:
 I learn how to superpose 2 items to create the view when we hover an image.
 
 ```html
-<img class="equilibrium" alt="image-equilibrium" src="./images/image-equilibrium.jpg">
-<div class="overlay">
-  <img class="img-overlay" src="./images/icon-view.svg" alt="icon-view">
+<div class="img-container">
+  <img class="equilibrium" alt="image-equilibrium" src="./images/image-equilibrium.jpg">
+  <div class="overlay">
+    <img class="img-overlay" src="./images/icon-view.svg" alt="icon-view">
+  </div>
 </div>
 ```
 ```css
-.overlay {
-      position: absolute;
-      background-color: hsla(178, 100%, 50%, 0.5);
-      top: 18.7%;
-      height: 300px;
+.img-container {
+      position: relative;
       width: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      opacity: 0;
- }
+      height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  top: 0;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 0;
+}
 
 .overlay:hover {
   opacity: 1;

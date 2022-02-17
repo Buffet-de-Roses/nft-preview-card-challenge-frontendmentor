@@ -112,10 +112,16 @@
       margin-right: 4px;
     }
 
+    .img-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
     .overlay {
       position: absolute;
       background-color: hsla(178, 100%, 50%, 0.5);
-      top: 18.7%;
+      top: 0;
       height: 300px;
       width: 300px;
       display: flex;
@@ -136,9 +142,11 @@
   <main>
     <h1></h1>
     <div class="card">
-      <img class="equilibrium" alt="image-equilibrium" src="./images/image-equilibrium.jpg">
-      <div class="overlay">
-        <img class="img-overlay" src="./images/icon-view.svg" alt="icon-view">
+      <div class="img-container">
+        <img class="equilibrium" alt="image-equilibrium" src="./images/image-equilibrium.jpg">
+        <div class="overlay">
+          <img class="img-overlay" src="./images/icon-view.svg" alt="icon-view">
+        </div>
       </div>
       <div class="informations">
         <h2><a class="nft-a" href="#">Equilibrium #3429</a></h2>
